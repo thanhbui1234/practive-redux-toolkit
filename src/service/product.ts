@@ -9,3 +9,21 @@ export const getAll = async () => {
     console.log(error.message);
   }
 };
+
+export const getUserByID = async (id: number) => {
+  try {
+    const rest: AxiosResponse<IPUser> = await instance.get(`/users/${id}`);
+    return rest.data || [];
+  } catch (error: any) {
+    console.log(error.message);
+  }
+};
+
+export const createUser = async (data: IPUser) => {
+  try {
+    const rest: AxiosResponse<IPUser[]> = await instance.post(`/users`, data);
+    return rest.data || [];
+  } catch (error: any) {
+    console.log(error.message);
+  }
+};
