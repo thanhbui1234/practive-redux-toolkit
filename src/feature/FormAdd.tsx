@@ -1,8 +1,5 @@
 import Form from "react-bootstrap/Form";
 import { useForm, SubmitHandler } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { zoiSchema } from "../common/schema";
-import ToastCumstom from "../components/Toast";
 import { useDispatch } from "react-redux";
 import { createUserT } from "../redux/feature/userSlice";
 import { IPUser } from "../common/user";
